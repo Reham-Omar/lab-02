@@ -66,11 +66,11 @@ function selection() {
         console.log(selected);
         let allselected =hornArr.filter((element) => element.keyword=== selected);
         console.log(allselected);
+        $('section:not(:first)').remove();
         allselected.forEach(value => {
          value.render() ;
         });
-        $('section').hide();
-        // $(selected).show();
+        
 
         
     });
