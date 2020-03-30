@@ -17,12 +17,12 @@ footer {
 }
 
 #photo-template {
-    width: 430px;
+    width: 400px;
     height: 354px;
     position: relative;
     float: left;
-    margin: 26px 33px;
+    margin: 26px 20px;
     background: beige;
-    padding: 11px 18px;
+    padding: 11px 10px;
     text-align: center;
 }

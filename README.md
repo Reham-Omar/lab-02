@@ -1,12 +1,13 @@
-Number and name of feature: ________________________________
+Number and name of feature: __Feature #1: Display images /// Feature #2: Filter images
+////Feature #3: Style the application
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: __7 hours___
 
-Start time: _____
+Start time: __2 pm  __
 
-Finish time: _____
+Finish time: __ 1 am ___
 
-Actual time needed to complete: _____
+Actual time needed to complete: __ 11 hours ___
 
 
 User Acceptance Tests
