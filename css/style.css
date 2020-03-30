@@ -1,0 +1,49 @@
+/* @import 'base.css';
+@import 'layout.css';
+@import 'modules.css'; */
+
+*{
+    box-sizing: border-box;
+
+}
+body {
+    line-height: 1;
+}
+h1 {
+    font-size: 33px;
+    font-family: cursive;
+    text-align: center;
+    padding: 39px;
+    margin: 10px;
+}
+select {
+    margin-left: 684px;
+}
+img {
+    height: 228px;
+    width: 340px;
+}
+
+.photo-template {
+    width: 430px;
+    height: 354px;
+    position: relative;
+    float: left;
+    margin: 26px 33px;
+    background: beige;
+    padding: 11px 18px;
+    text-align: center;
+}
+
+h2 {
+    padding: 12px;
+    font-family: monospace;
+    font-size: 21px;
+    font-weight: bold;
+
+}
+p {
+    padding: 14px 1px;
+    font-family: monospace;
+    font-size: 14px;
+}
