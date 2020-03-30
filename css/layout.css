@@ -1,0 +1,28 @@
+h1 {
+    font-size: 33px;
+    font-family: cursive;
+    text-align: center;
+    padding: 39px;
+    margin: 10px;
+}
+
+footer {
+    clear: both;
+    background-color: bisque;
+    text-align: center;
+    font-size: 16px;
+    font-family: fantasy;
+    height: 30px;
+    line-height: 2;
+}
+
+#photo-template {
+    width: 430px;
+    height: 354px;
+    position: relative;
+    float: left;
+    margin: 26px 33px;
+    background: beige;
+    padding: 11px 18px;
+    text-align: center;
+}
