@@ -1,32 +1,77 @@
 'use strict';
 
+$.get('./data/page-1.json')
+    .then(data => {
+        //    console.log(data);
+        data.forEach((element) => {
+
+            let newHorn = new Horn(element);
+            newHorn.render();
+            
+            //    console.log(element);
+        });
+        keywordArr.forEach(element => {
+            // let newHorn = new Horn(element);
+            // newHorn.selectOption(element);
+            theOption(element);
+        });
+
+    })
+    .then(() => selection());
+
+
 
 function Horn(element) {
     this.image_url = element.image_url;
     this.title = element.title;
-    console.log(this.title);
     this.description = element.description;
+    this.keyword = element.keyword;
+    // console.log(this.keyword);
+    this.horns = element.horns;
+    hornArr.push(this);
+    if (keywordArr.includes(this.keyword) === false) {
+        keywordArr.push(this.keyword);
+    }
 }
+let hornArr = [];
+let keywordArr = [];
+console.log(keywordArr);
 
 Horn.prototype.render = function () {
 
-    let secClone = $('.photo-template').clone();
-    secClone.removeClass('photo-template');
-    secClone.find('h2').text(this.title);
-    secClone.find('img').attr('src', this.image_url);
-    secClone.find('p').text(this.description);
-    $('main').append(secClone);
+
+    let sectionClone = $('#photo-template').clone();
+    sectionClone.find('h2').text(this.title);
+    sectionClone.find('img').attr('src', this.image_url);
+    sectionClone.find('p').text(this.description);
+    $('main').append(sectionClone);
+
 
 }
+function theOption(element) {
 
-$.get('./data/page-1.json')
-    .then(data => {
-        //    console.log(data);
-        data.forEach((element, ind) => {
+    let options = $('<option></option>').text(element);
+    $('select').append(options);
+    // let selectClone = $('.select-Clone').clone();
+    // selectClone.find('option').text(i);
+    // console.log(i);
+    // $('main').append(selectClone);
+}
 
-            let newHorn = new Horn(element);
-    newHorn.render();
-            //    console.log(element);
-        })
 
+function selection() {
+    $('select').on('change', function () {
+
+        let selected = $(this).val();
+        console.log(selected);
+        let allselected =hornArr.filter((element) => element.keyword=== selected);
+        console.log(allselected);
+        allselected.forEach(value => {
+         value.render() ;
+        });
+        $('section').hide();
+        // $(selected).show();
+
+        
     });
+}

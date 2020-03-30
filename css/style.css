@@ -24,7 +24,7 @@ img {
     width: 340px;
 }
 
-.photo-template {
+#photo-template {
     width: 430px;
     height: 354px;
     position: relative;
@@ -46,4 +46,14 @@ p {
     padding: 14px 1px;
     font-family: monospace;
     font-size: 14px;
+}
+
+footer {
+    clear: both;
+    background-color: bisque;
+    text-align: center;
+    font-size: 16px;
+    font-family: fantasy;
+    height: 30px;
+    line-height: 2;
 }
