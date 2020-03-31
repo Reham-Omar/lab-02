@@ -16,7 +16,11 @@ footer {
     line-height: 2;
 }
 
-#photo-template {
+.photo-template {
+    display: none;
+}
+
+section {
     width: 400px;
     height: 354px;
     position: relative;
