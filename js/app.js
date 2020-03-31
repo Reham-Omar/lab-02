@@ -7,12 +7,10 @@ $.get('./data/page-1.json')
 
             let newHorn = new Horn(element);
             newHorn.render();
-            
+
             //    console.log(element);
         });
         keywordArr.forEach(element => {
-            // let newHorn = new Horn(element);
-            // newHorn.selectOption(element);
             theOption(element);
         });
 
@@ -40,7 +38,8 @@ console.log(keywordArr);
 Horn.prototype.render = function () {
 
 
-    let sectionClone = $('#photo-template').clone();
+    let sectionClone = $('.photo-template').clone();
+    sectionClone.removeClass('photo-template');
     sectionClone.find('h2').text(this.title);
     sectionClone.find('img').attr('src', this.image_url);
     sectionClone.find('p').text(this.description);
@@ -64,14 +63,14 @@ function selection() {
 
         let selected = $(this).val();
         console.log(selected);
-        let allselected =hornArr.filter((element) => element.keyword=== selected);
+        let allselected = hornArr.filter((element) => element.keyword === selected);
         console.log(allselected);
         $('section:not(:first)').remove();
         allselected.forEach(value => {
-         value.render() ;
+            value.render();
         });
-        
 
-        
+
+
     });
 }
